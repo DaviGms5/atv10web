@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    text-align: center; /* Centraliza todo o conteúdo */
+    padding-top: 50px; /* Dá um respiro no topo */
+}
+
+/* Centraliza e estiliza o título */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estiliza o texto explicativo */
+p {
+    font-size: 1rem;
+    color: #444;
+    max-width: 500px;
+    margin: 0 auto 30px auto; /* centraliza e dá espaço abaixo */
+    line-height: 1.5;
+}
+
+/* Container de botões */
+.botao-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os botões */
+    margin-bottom: 40px;
+}
+
+/* Botões maiores e mais bonitos */
+.botao-container button {
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-container button:hover {
+    background-color: #217dbb;
+}
