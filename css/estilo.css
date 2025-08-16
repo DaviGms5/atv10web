@@ -1,27 +1,41 @@
+/* ===== Estilo geral ===== */
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #dfe9f3, #ffffff);
-    text-align: center; /* Centraliza todo o conteúdo */
-    padding-top: 50px; /* Dá um respiro no topo */
+    text-align: center; /* Centraliza títulos e textos principais */
+    padding: 30px;
+    margin: 0;
 }
 
-/* Centraliza e estiliza o título */
+/* ===== Títulos ===== */
 h1 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #333;
 }
 
-/* Estiliza o texto explicativo */
+h3 {
+    font-size: 1.2rem;
+    color: #222;
+    margin: 10px 0 5px 0;
+}
+
+h4 {
+    font-size: 1.1rem;
+    color: #27ae60; /* Verde para destacar preço */
+    margin: 5px 0 10px 0;
+}
+
+/* ===== Parágrafos ===== */
 p {
     font-size: 1rem;
     color: #444;
-    max-width: 500px;
-    margin: 0 auto 30px auto; /* centraliza e dá espaço abaixo */
+    max-width: 600px;
+    margin: 0 auto 30px auto;
     line-height: 1.5;
 }
 
-/* Container de botões */
+/* ===== Botões ===== */
 .botao-container {
     display: flex;
     justify-content: center;
@@ -29,7 +43,6 @@ p {
     margin-bottom: 40px;
 }
 
-/* Botões maiores e mais bonitos */
 .botao-container button {
     padding: 15px 25px;
     font-size: 1.1rem;
@@ -44,4 +57,46 @@ p {
 
 .botao-container button:hover {
     background-color: #217dbb;
+}
+
+/* ===== Produtos (grid) ===== */
+.produtos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Card do produto */
+.produto {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+/* Efeito hover */
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Imagem do produto */
+.produto img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* Descrição do produto */
+.produto p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+    margin: 0;
 }

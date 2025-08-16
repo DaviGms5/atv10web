@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Login Administração </title>
+    <title>Login Administração</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-    <button class = "botao-login" id = "botaoLogin" onclick = "botaoLogin()"> Login </button>
+    <div id="conteudo-tela-login">
+        <h1>Entrar com seu usuário:</h1>
+        <p>Digite suas credenciais para acessar a área administrativa da Loja do Seu Tião.</p>
+        
+        <form id="formulario-entrada">
+            <input type="text" placeholder="Nome de usuário" id="nomeUsuario" required>
+            <br><br>
+            <input type="password" placeholder="Senha" id="senhaUsuario" required>
+            <br><br>
+            <div class="botao-container">
+                <button type="submit">Entrar</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="js/main.js"></script>
 </body>
 </html>
