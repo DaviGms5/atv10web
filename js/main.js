@@ -1,7 +1,7 @@
 botaoDeletar = document.getElementById("botao-deletar");
 botaoCompradores = document.getElementById("botao-compradores");
 botaoEditar = document.getElementById("botao-editar");
-botaoLogin = document.getElementById("botao-login");
+
 
 function botaoEditar()
 {
@@ -18,19 +18,23 @@ function botaoCompradores()
     
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => 
+{
     const formulario = document.getElementById("formulario-entrada");
-
-    formulario.addEventListener("submit", (event) => {
+    formulario.addEventListener("submit", (event) => 
+    {
         event.preventDefault(); // impede o reload da página
 
         const usuario = document.getElementById("nomeUsuario").value.trim();
         const senha = document.getElementById("senhaUsuario").value.trim();
 
-        if (usuario === "Admin123!" && senha === "Admin123!") {
-            // Redireciona para a página de administração
+        if (usuario === "Admin123!" && senha === "Admin123!") 
+        {
             window.location.href = "paginaAdministracao.html";
-        } else {
+        } 
+        
+        else 
+        {
             alert("A senha está incorreta! Volte caso queira entrar como usuário");
         }
     });
