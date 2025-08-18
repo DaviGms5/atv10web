@@ -1,5 +1,5 @@
-/* ===== Estilo geral ===== */
-body {
+body 
+{
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #dfe9f3, #ffffff);
     text-align: center; /* Centraliza títulos e textos principais */
@@ -8,26 +8,30 @@ body {
 }
 
 /* ===== Títulos ===== */
-h1 {
+h1 
+{
     font-size: 2rem;
     margin-bottom: 20px;
     color: #333;
 }
 
-h3 {
+h3 
+{
     font-size: 1.2rem;
     color: #222;
     margin: 10px 0 5px 0;
 }
 
-h4 {
+h4 
+{
     font-size: 1.1rem;
     color: #27ae60; /* Verde para destacar preço */
     margin: 5px 0 10px 0;
 }
 
 /* ===== Parágrafos ===== */
-p {
+p 
+{
     font-size: 1rem;
     color: #444;
     max-width: 600px;
@@ -36,14 +40,16 @@ p {
 }
 
 /* ===== Botões ===== */
-.botao-container {
+.botao-container 
+{
     display: flex;
     justify-content: center;
     gap: 20px; /* Espaço entre os botões */
     margin-bottom: 40px;
 }
 
-.botao-container button {
+.botao-container button 
+{
     padding: 15px 25px;
     font-size: 1.1rem;
     border-radius: 8px;
@@ -55,12 +61,14 @@ p {
     transition: 0.3s;
 }
 
-.botao-container button:hover {
+.botao-container button:hover 
+{
     background-color: #217dbb;
 }
 
 /* ===== Produtos (grid) ===== */
-.produtos-container {
+.produtos-container 
+{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo */
     gap: 20px;
@@ -69,7 +77,8 @@ p {
 }
 
 /* Card do produto */
-.produto {
+.produto 
+{
     background: #fff;
     border-radius: 10px;
     padding: 15px;
@@ -79,13 +88,15 @@ p {
 }
 
 /* Efeito hover */
-.produto:hover {
+.produto:hover 
+{
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 /* Imagem do produto */
-.produto img {
+.produto img 
+{
     width: 100%;
     max-width: 200px;
     height: auto;
@@ -94,9 +105,38 @@ p {
 }
 
 /* Descrição do produto */
-.produto p {
+.produto p 
+{
     font-size: 0.9rem;
     color: #555;
     line-height: 1.4;
     margin: 0;
+}
+
+/* Container para os botões */
+.grupo-botoes-container {
+    display: flex; /* Alinha os botões em uma linha */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 10px; /* Cria um espaço de 10px entre os botões */
+}
+
+/* Estilo para cada botão individual */
+.grupo-botao 
+{
+    margin-top: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #000;
+    border-radius: 4px;
+    border: 1px solid #999;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #f0f0f0, #dcdcdc);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+}
+
+.grupo-botao:hover 
+{
+    background: linear-gradient(to bottom, #dcdcdc, #c8c8c8);
 }

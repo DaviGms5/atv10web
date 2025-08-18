@@ -9,10 +9,27 @@
 <body>
     <div class="div-administracao">
         <h1>Painel de Administração</h1>
-        <div class="grupo-botao">
-            <button id="botao-deletar" class="btn btn-danger" onclick = "botaoDeletar()">Deletar</button>
-            <button id="botao-compradores" class="btn btn-info" onclick = "botaoCompradores()">Mostrar Compradores</button>
-            <button id="botao-editar" class="btn btn-primary" onclick = "botaoEditar()">Editar</button>
+
+        <h2> Abaixo, estão a nossa lista de pessoas que já compraram em nossa loja e gostaram!!</h2>
+            <h3>Lista de Compradores</h3>
+                <table id="tabela-compradores" border="1" cellspacing="0" cellpadding="5" style="width:100%; text-align:left;">
+                <thead style="background-color:#f2f2f2;">
+                    <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Papel</th>
+                    </tr>
+                </thead>
+                <tbody id="compradores-lista">
+                    <tr><td colspan="5">Clique em "Mostrar Compradores" para carregar </td></tr>
+                </tbody>
+                </table>
+        <div class="grupo-botao-container">
+            <button id="botao-deletar" class = "grupo-botao" >Deletar</button>
+            <button id="botao-compradores" class = "grupo-botao">Mostrar Compradores</button>
+            <button id="botao-editar" class = "grupo-botao">Editar</button>
+            <button class ="grupo-botao" onclick="window.location.href='index.html'"> Sair </button>
         </div>
     </div>
 
