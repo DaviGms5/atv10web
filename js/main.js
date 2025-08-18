@@ -1,50 +1,39 @@
-let botaoEditar = document.getElementById("botao-editar");
+
 let botaoCompradores = document.getElementById("botao-compradores");
-let botaoDeletar = document.getElementById("botao-deletar");
+let botaoAdicionar = document.getElementById("botao-adicionar");
 
-if (botaoEditar) 
+if (botaoAdicionar) 
 {
-    botaoEditar.addEventListener("click", () => 
+    botaoAdicionar.addEventListener("click", () => 
     {
-        const id = prompt("Digite o ID do comprador a ser editado:");
-        fetch(`https://fakeapi.platzi.com/api/v1/users/${id}`, 
-        {
-            method: "PUT",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify
-            ({
-                name: "Novo Nome",
-                email: "novo@email.com"
-            })
-        })
-        .then(res => res.json())
-        .then(data => 
-        {
-            alert(`Usuário ID ${id} atualizado com sucesso!\nNovo nome: ${data.name}`);
-        })
-        .catch(err => console.error("Erro no PUT:", err));
-    });
-}
+        const nome = prompt("Digite o nome do comprador:");
+        const email = prompt("Digite o email do comprador:");
 
-if (botaoDeletar) 
-{
-    botaoDeletar.addEventListener("click", () => 
-    {
-        const id = prompt("Digite o ID do comprador a ser deletado:");
-        fetch(`https://fakeapi.platzi.com/api/v1/users/${id}`, { method: "DELETE" })
-        .then(res => 
-        {
-            if (res.ok) 
-            {
-                alert(`Comprador ID ${id} deletado com sucesso!`);
-            } 
-            
-            else 
-            {
-                alert("Erro ao deletar.");
-            }
-        })
-        .catch(err => console.error("Erro no DELETE:", err));
+        // Aqui simulamos um POST
+        const novoUsuario = {
+            id: Math.floor(Math.random() * 10000), // ID fake
+            name: nome || "Usuário Fake",
+            email: email || "fake@email.com",
+            role: "customer",
+            avatar: "https://api.lorem.space/image/face?w=150&h=150"
+        };
+
+        // Mostra no console como se fosse resposta do servidor
+        console.log("Usuário criado via POST fake:", novoUsuario);
+
+        // Também atualiza a tabela no HTML
+        const tabela = document.getElementById("compradores-lista");
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>${novoUsuario.id}</td>
+            <td>${novoUsuario.name}</td>
+            <td>${novoUsuario.email}</td>
+            <td>${novoUsuario.role}</td>
+            <td><img src="${novoUsuario.avatar}" width="40" height="40" style="border-radius:50%"></td>
+        `;
+        tabela.appendChild(tr);
+
+        alert(`Usuário ${novoUsuario.name} cadastrado com sucesso (POST simulado)!`);
     });
 }
 
