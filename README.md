@@ -5,9 +5,10 @@ Davi Gomes Mendes
 As requisições do tipo PUT e DELETE não funcionam, pois a API percente a um domínio diferente.
 
 <h2> Tabela com exemplos das requisições utilizadas em cada página </h2>
-| Página | Tipo da requisição | Endpoint
-
-
+| Página | Tipo requisição | endpoint
+| paginaAdministracao.html | GET | https://api.escuelajs.co/api/v1/users
+| paginaAdministracao.html | DELETE | https://api.escuelajs.co/api/v1/users
+| paginaAdministracao.html | PUT | https://api.escuelajs.co/api/v1/users
 <h2> Tecnologias utilizadas: </h2>
 
 
